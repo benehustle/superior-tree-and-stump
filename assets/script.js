@@ -153,7 +153,8 @@ function initScrollAnimations() {
 function initCounters() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('.stat-number').forEach(el => {
-      el.textContent = el.dataset.target + (el.dataset.suffix || '');
+      const t = el.dataset.target;
+      el.textContent = (t !== undefined ? t : el.textContent) + (el.dataset.suffix || '');
     });
     return;
   }
@@ -166,6 +167,12 @@ function initCounters() {
       const el       = entry.target;
       const target   = parseFloat(el.dataset.target);
       const suffix   = el.dataset.suffix || '';
+
+      if (isNaN(target) || target === 0) {
+        el.textContent = (el.dataset.target || '0') + suffix;
+        return;
+      }
+
       const decimals = parseInt(el.dataset.decimals) || 0;
       const duration = 1800;
       const start    = performance.now();
