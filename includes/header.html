@@ -7,7 +7,19 @@
       <ul class="nav__list" role="list">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="about.html" class="nav__link">About</a></li>
-        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="services.html" class="nav__link nav__link--dropdown">
+            Services
+            <svg class="nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="tree-removal.html" class="nav__dropdown-link">Tree Removal</a></li>
+            <li><a href="tree-pruning.html" class="nav__dropdown-link">Tree Pruning</a></li>
+            <li><a href="stump-grinding.html" class="nav__dropdown-link">Stump Grinding</a></li>
+            <li><a href="storm-damage-emergency.html" class="nav__dropdown-link">Storm Damage &amp; Emergency</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html" class="nav__link">Gallery</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
       <a href="tel:+61431636925" class="nav__cta" aria-label="Call us on 0431 636 925">
@@ -35,7 +47,19 @@
   <ul class="nav-drawer__list" role="list">
     <li><a href="index.html" class="nav-drawer__link">Home</a></li>
     <li><a href="about.html" class="nav-drawer__link">About</a></li>
-    <li><a href="services.html" class="nav-drawer__link">Services</a></li>
+    <li class="nav-drawer__accordion">
+      <details class="nav-drawer__details">
+        <summary class="nav-drawer__summary">Services</summary>
+        <ul class="nav-drawer__sublist" role="list">
+          <li><a href="services.html" class="nav-drawer__link nav-drawer__link--sub">All services</a></li>
+          <li><a href="tree-removal.html" class="nav-drawer__link nav-drawer__link--sub">Tree Removal</a></li>
+          <li><a href="tree-pruning.html" class="nav-drawer__link nav-drawer__link--sub">Tree Pruning</a></li>
+          <li><a href="stump-grinding.html" class="nav-drawer__link nav-drawer__link--sub">Stump Grinding</a></li>
+          <li><a href="storm-damage-emergency.html" class="nav-drawer__link nav-drawer__link--sub">Storm Damage &amp; Emergency</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="gallery.html" class="nav-drawer__link">Gallery</a></li>
     <li><a href="contact.html" class="nav-drawer__link">Contact</a></li>
   </ul>
   <a href="tel:+61431636925" class="nav-drawer__cta">

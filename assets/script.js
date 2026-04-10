@@ -97,7 +97,7 @@ function setActiveNavLink() {
   const pathname = window.location.pathname;
   const filename = pathname.split('/').pop() || 'index.html';
 
-  document.querySelectorAll('.nav__link, .nav-drawer__link').forEach(link => {
+  document.querySelectorAll('.nav__link, .nav-drawer__link, .nav__dropdown-link').forEach(link => {
     const href     = link.getAttribute('href') || '';
     const linkFile = href.split('/').pop() || 'index.html';
 
@@ -107,6 +107,11 @@ function setActiveNavLink() {
 
     if (isHome || (!isHome && isMatch && filename !== '')) {
       link.classList.add('active');
+      if (link.classList.contains('nav__dropdown-link')) {
+        const dropdown = link.closest('.nav__item--dropdown');
+        const trigger = dropdown && dropdown.querySelector('.nav__link--dropdown');
+        if (trigger) trigger.classList.add('active');
+      }
     }
   });
 }
