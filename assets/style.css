@@ -664,17 +664,17 @@ p {
 .hero--about .hero__bg        { background-position: 70% center; }
 .hero--services .hero__bg     { background-position: 30% center; }
 .hero--contact .hero__bg      { background-position: center 40%; }
+.hero--gallery .hero__bg      { background-position: center 35%; }
 .hero--tree-removal .hero__bg       { background-position: center 25%; }
 .hero--tree-pruning .hero__bg       { background-position: 40% center; }
 .hero--stump-grinding .hero__bg     { background-position: center 60%; }
 .hero--storm-damage .hero__bg       { background-position: 60% center; }
-.hero--council .hero__bg            { background-position: center 35%; }
-.hero--norwood .hero__bg            { background-position: 35% center; }
-.hero--burnside .hero__bg           { background-position: center 45%; }
-.hero--glenelg .hero__bg            { background-position: 65% center; }
+.hero--gawler .hero__bg             { background-position: 28% center; }
+.hero--semaphore .hero__bg          { background-position: 70% center; }
+.hero--magill .hero__bg             { background-position: 48% center; }
 .hero--unley .hero__bg              { background-position: center 55%; }
-.hero--prospect .hero__bg           { background-position: 45% center; }
-.hero--modbury .hero__bg            { background-position: center 30%; }
+.hero--blackwood .hero__bg          { background-position: 58% center; }
+.hero--aberfoyle-park .hero__bg     { background-position: 42% center; }
 .hero--salisbury .hero__bg          { background-position: 55% center; }
 
 @media (max-width: 768px) {
@@ -2322,4 +2322,34 @@ p {
   .services-full-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Gallery page
+   ============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-light);
+}
+
+.gallery-card__caption {
+  padding: 16px 18px 18px;
+  font-weight: 700;
+  color: var(--color-secondary);
 }
